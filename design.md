@@ -11,8 +11,8 @@ Action - A thing that is done (overridden by other Action children classes)
 Script - A collection of actions to perform each "turn"
 Control Actors - Gets direction and moves the bike [child of Action]
 Draw Actors - Draws actors on the screen [child of Action]
-Handle Collisions - Checks if a player has collided with a trail [child of Action]
-Move Actors - Update all actors' new positions [child of Action]
+Handle Collisions - Checks if a player has collided with a trail [child of Action, and an implementation of Action interface]]
+Move Actors - Update all actors' new positions [child of Action, and an implementation of Action interface]
 Update Scores - Adds to the scores as needed [child of Action]
 '''
 
