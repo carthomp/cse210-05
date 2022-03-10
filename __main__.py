@@ -20,8 +20,10 @@ def main():
     
     # create the cast
     cast = Cast()
-    cast.add_actor("cycles", Cycle())
-    cast.add_actor("scores", Score())
+    # create 2 cycles and 2 scores
+    for i in range(2):
+        cast.add_actor("cycles", Cycle())
+        cast.add_actor("scores", Score())
    
     # start the game
     keyboard_service = KeyboardService()

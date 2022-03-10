@@ -1,4 +1,4 @@
-# import constants
+import constants
 from game.casting.actor import Actor
 from game.other.point import Point
 
