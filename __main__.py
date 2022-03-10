@@ -20,9 +20,13 @@ def main():
     
     # create the cast
     cast = Cast()
-    # create 2 cycles and 2 scores
+    # create 2 cycles and 2 scores - wasd for the first, ijkl for the second
     for i in range(2):
-        cast.add_actor("cycles", Cycle())
+        if not i:
+            keymap = ['w', 'a', 's', 'd']
+        else:
+            keymap = ['i', 'j', 'k', 'l']
+        cast.add_actor("cycles", Cycle(keymap))
         cast.add_actor("scores", Score())
    
     # start the game

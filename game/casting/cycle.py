@@ -12,10 +12,14 @@ class Cycle(Actor):
     Attributes:
         _points (int): The number of points the food is worth.
     """
-    def __init__(self):
+    def __init__(self, keymap):
         super().__init__()
         self._segments = []
+        self._keymap = keymap
         self._prepare_body()
+    
+    def get_keymap(self):
+        return self._keymap
 
     def get_segments(self):
         return self._segments
