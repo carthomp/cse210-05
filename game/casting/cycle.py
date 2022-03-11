@@ -49,25 +49,34 @@ class Cycle(Actor):
             segment.set_position(position)
             segment.set_velocity(velocity)
             segment.set_text("#")
-            segment.set_color(constants.GREEN)
+            if self._keymap[0] == 'w':
+                segment.set_color(constants.GREEN)
+            else:
+                segment.set_color(constants.PURPLE)
             self._segments.append(segment)
 
     def turn_head(self, velocity):
         self._segments[0].set_velocity(velocity)
     
     def _prepare_body(self):
-        x = int(constants.MAX_X / 2)
+        if self._keymap[0] == 'w':
+            x = int(constants.MAX_X / 4)
+        else:
+            x = int(3 * constants.MAX_X / 4)
         y = int(constants.MAX_Y / 2)
 
-        for i in range(constants.SNAKE_LENGTH):
-            position = Point(x - i * constants.CELL_SIZE, y)
-            velocity = Point(1 * constants.CELL_SIZE, 0)
-            text = "8" if i == 0 else "#"
-            color = constants.YELLOW if i == 0 else constants.GREEN
+        
+        position = Point(x, y)
+        velocity = Point(0, 1 * constants.CELL_SIZE)
+        text = "8"
+        if self._keymap[0] == 'w':
+            color = constants.YELLOW
+        else:
+            color = constants.BLUE
             
-            segment = Actor()
-            segment.set_position(position)
-            segment.set_velocity(velocity)
-            segment.set_text(text)
-            segment.set_color(color)
-            self._segments.append(segment)
+        segment = Actor()
+        segment.set_position(position)
+        segment.set_velocity(velocity)
+        segment.set_text(text)
+        segment.set_color(color)
+        self._segments.append(segment)

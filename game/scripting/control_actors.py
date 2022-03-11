@@ -31,22 +31,30 @@ class ControlActorsAction(Action):
         """
         cycles = cast.get_actors("cycles")
         for i in range(2):
+            default = True
             cycle = cycles[i]
             keymap = cycle.get_keymap()
             # left
             if self._keyboard_service.is_key_down(keymap[1]):
                 self._direction = Point(-constants.CELL_SIZE, 0)
+                default = False
             
             # right
             if self._keyboard_service.is_key_down(keymap[3]):
                 self._direction = Point(constants.CELL_SIZE, 0)
+                default = False
             
             # up
             if self._keyboard_service.is_key_down(keymap[0]):
                 self._direction = Point(0, -constants.CELL_SIZE)
+                default = False
             
             # down
             if self._keyboard_service.is_key_down(keymap[2]):
                 self._direction = Point(0, constants.CELL_SIZE)
+                default = False
+            
+            if default:
+                self._direction = cycle.get_velocity()
 
             cycle.turn_head(self._direction)

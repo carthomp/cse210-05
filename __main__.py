@@ -26,7 +26,9 @@ def main():
             keymap = ['w', 'a', 's', 'd']
         else:
             keymap = ['i', 'j', 'k', 'l']
-        cast.add_actor("cycles", Cycle(keymap))
+        cycle = Cycle(keymap)
+        cycle.set_velocity(Point(0, - constants.CELL_SIZE))
+        cast.add_actor("cycles", cycle)
         cast.add_actor("scores", Score())
    
     # start the game
@@ -37,7 +39,7 @@ def main():
     script.add_action("input", ControlActorsAction(keyboard_service))
     script.add_action("update", MoveActorsAction())
     script.add_action("update", HandleCollisionsAction())
-    script.add_action("update", UpdateScores)
+    script.add_action("update", UpdateScores())
     script.add_action("output", DrawActorsAction(video_service))
     
     director = Director(video_service)
