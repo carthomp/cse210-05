@@ -7,8 +7,7 @@ class HandleCollisionsAction(Action):
     """
     An update action that handles interactions between the actors.
     
-    The responsibility of HandleCollisionsAction is to handle the situation when the snake collides
-    with the food, or the snake collides with its segments, or the game is over.
+    The responsibility of HandleCollisionsAction is to handle the situation when the snake collides with its segments,  the game is over.
 
     Attributes:
         _is_game_over (boolean): Whether or not the game is over.
@@ -31,7 +30,7 @@ class HandleCollisionsAction(Action):
             self._handle_game_over(cast)
 
     def _handle_growth(self, cast):
-        """Updates the score nd moves the food if the snake collides with the food.
+        """Updates the score and moves the snake 
         
         Args:
             cast (Cast): The cast of Actors in the game.
@@ -57,7 +56,7 @@ class HandleCollisionsAction(Action):
                     self._is_game_over = True
         
     def _handle_game_over(self, cast):
-        """Shows the 'game over' message and turns the snake and food white if the game is over.
+        """Shows the 'game over' message and turns the snake white if the game is over.
         
         Args:
             cast (Cast): The cast of Actors in the game.
