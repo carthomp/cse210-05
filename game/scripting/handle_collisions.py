@@ -31,7 +31,7 @@ class HandleCollisionsAction(Action):
             self._handle_game_over(cast)
 
     def _handle_growth(self, cast):
-        """Updates the score nd moves the food if the snake collides with the food.
+        """Keeps the trail growing.
         
         Args:
             cast (Cast): The cast of Actors in the game.
@@ -41,7 +41,7 @@ class HandleCollisionsAction(Action):
             cycle.grow_tail(1)
     
     def _handle_segment_collision(self, cast):
-        """Sets the game over flag if the snake collides with one of its segments.
+        """Sets the game over flag if the cycle collides with any cycle trail.
         
         Args:
             cast (Cast): The cast of Actors in the game.
