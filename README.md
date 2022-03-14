@@ -1,4 +1,4 @@
-# Snake
+# Cycles
 
 Cycles is a game based on the good old Tron Lightbike arcade game. Two players control their cycles, leaving a trail behind them. The first player to crash into either player's trail loses. The score increases for each direction change, and the winner gets bonus points.
 
