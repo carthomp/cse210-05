@@ -7,10 +7,10 @@ class Script:
     def __init__(self):
         """Constructs a new Action."""
         self._actions = {}
-        
+
     def add_action(self, group, action):
         """Adds an action to the given group.
-        
+
         Args:
             group: A string containing the name of the group.
             action: The instance of Action to add.
@@ -21,7 +21,7 @@ class Script:
 
     def clear_actions(self, group):
         """Clears actions from the given group.
-        
+
         Args:
             group: A string containing the name of the group.
         """
@@ -35,7 +35,7 @@ class Script:
 
     def get_actions(self, group):
         """Gets the actions in the given group.
-        
+
         Args:
             group: A string containing the name of the group.
 
@@ -46,10 +46,10 @@ class Script:
         if group in self._actions.keys():
             results = self._actions[group].copy()
         return results
-    
+
     def remove_action(self, group, action):
         """Removes an action from the given group.
-        
+
         Args:
             group: A string containing the name of the group.
             action: The instance of Action to remove.

@@ -1,10 +1,10 @@
-from constants import * 
+from constants import *
 
 
 class Text:
     """A text message."""
 
-    def __init__(self, value, fontfile = FONT_FILE, size = FONT_LARGE, alignment = ALIGN_LEFT):
+    def __init__(self, value, fontfile=FONT_FILE, size=FONT_LARGE, alignment=ALIGN_LEFT):
         """Constructs a new Text."""
         self._value = value
         self._fontfile = fontfile
@@ -13,7 +13,7 @@ class Text:
 
     def get_alignment(self):
         """Gets the alignment for the text.
-        
+
         Returns:
             A number representing the text alignment.
         """
@@ -21,7 +21,7 @@ class Text:
 
     def get_fontfile(self):
         """Gets the font file for the text.
-        
+
         Returns:
             A string containing the font file.
         """
@@ -29,7 +29,7 @@ class Text:
 
     def get_size(self):
         """Gets the font size of the text.
-        
+
         Returns:
             A number representing the font size.
         """
@@ -37,7 +37,7 @@ class Text:
 
     def get_value(self):
         """Gets the text's value.
-        
+
         Returns:
             A string containing the text's value.
         """
@@ -45,7 +45,7 @@ class Text:
 
     def set_value(self, value):
         """Sets the text's value.
-        
+
         Args:
             A string containing the text's value.
         """

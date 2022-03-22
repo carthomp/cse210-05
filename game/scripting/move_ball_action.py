@@ -6,7 +6,7 @@ class MoveBallAction(Action):
 
     def __init__(self):
         pass
-        
+
     def execute(self, cast, script, callback):
         ball = cast.get_first_actor(BALL_GROUP)
         body = ball.get_body()

@@ -5,10 +5,10 @@ from game.casting.point import Point
 
 class Racket(Actor):
     """A implement used to hit and bounce the ball in the game."""
-    
-    def __init__(self, body, animation, debug = False):
+
+    def __init__(self, body, animation, debug=False):
         """Constructs a new Bat.
-        
+
         Args:Args:
             body: A new instance of Body.
             animation: A new instance of Animation.
@@ -20,7 +20,7 @@ class Racket(Actor):
 
     def get_animation(self):
         """Gets the bat's animation.
-        
+
         Returns:
             An instance of Animation.
         """
@@ -28,7 +28,7 @@ class Racket(Actor):
 
     def get_body(self):
         """Gets the bat's body.
-        
+
         Returns:
             An instance of Body.
         """
@@ -45,12 +45,12 @@ class Racket(Actor):
         """Steers the bat to the left."""
         velocity = Point(-RACKET_VELOCITY, 0)
         self._body.set_velocity(velocity)
-        
+
     def swing_right(self):
         """Steers the bat to the right."""
         velocity = Point(RACKET_VELOCITY, 0)
         self._body.set_velocity(velocity)
-    
+
     def stop_moving(self):
         """Stops the bat from moving."""
         velocity = Point(0, 0)

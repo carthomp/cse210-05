@@ -10,7 +10,7 @@ class AudioService:
 
     def load_sounds(self, directory):
         """Loads all the sounds in the given directory and sub-directories.
-        
+
         Args:
             directory: A string containing the absolute folder path where sound files are stored.
         """
@@ -18,7 +18,7 @@ class AudioService:
 
     def play_sound(self, sound):
         """Plays the given sound.
-        
+
         Args:
             sound: An instance of the batter.casting.Sound class.
         """

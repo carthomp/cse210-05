@@ -6,7 +6,7 @@ class DrawDialogAction(Action):
 
     def __init__(self, video_service):
         self._video_service = video_service
-        
+
     def execute(self, cast, script, callback):
         dialogs = cast.get_actors(DIALOG_GROUP)
         for dialog in dialogs:

@@ -8,7 +8,7 @@ class TimedChangeSceneAction(Action):
         self._next_scene = next_scene
         self._delay = delay
         self._start = time.time()
-        
+
     def execute(self, cast, script, callback):
         elapsed = time.time() - self._start
         if elapsed >= self._delay:

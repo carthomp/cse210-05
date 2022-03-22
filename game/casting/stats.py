@@ -5,7 +5,7 @@ from game.casting.actor import Actor
 class Stats(Actor):
     """The game stats."""
 
-    def __init__(self, debug = False):
+    def __init__(self, debug=False):
         """Constructs a new Stats."""
         super().__init__(debug)
         self._level = 1
@@ -15,11 +15,11 @@ class Stats(Actor):
     def add_life(self):
         """Adds one life."""
         if self._lives < MAXIMUM_LIVES:
-            self._lives += 1 
+            self._lives += 1
 
     def add_points(self, points):
         """Adds the given points to the score.
-        
+
         Args:
             points: A number representing the points to add.
         """
@@ -40,7 +40,7 @@ class Stats(Actor):
             A number representing the lives.
         """
         return self._lives
-  
+
     def get_score(self):
         """Gets the score.
 
@@ -53,7 +53,7 @@ class Stats(Actor):
         """Removes one life."""
         if self._lives > 0:
             self._lives -= 1
-    
+
     def next_level(self):
         """Adds one level."""
         self._level += 1

@@ -1,15 +1,15 @@
 class Image:
     """An image."""
-    
-    def __init__(self, filename, scale = 1, rotation = 0):
+
+    def __init__(self, filename, scale=1, rotation=0):
         """Constructs a new Image."""
         self._filename = filename
         self._scale = scale
         self._rotation = rotation
-        
+
     def get_filename(self):
         """Gets the name of the image file.
-        
+
         Returns:
             A string containing the name of the image file.
         """

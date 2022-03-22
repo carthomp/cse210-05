@@ -6,7 +6,7 @@ class CheckOverAction(Action):
 
     def __init__(self):
         pass
-        
+
     def execute(self, cast, script, callback):
         bricks = cast.get_actors(BRICK_GROUP)
         if len(bricks) == 0:

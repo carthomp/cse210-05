@@ -6,7 +6,7 @@ class DrawHudAction(Action):
 
     def __init__(self, video_service):
         self._video_service = video_service
-        
+
     def execute(self, cast, script, callback):
         stats = cast.get_first_actor(STATS_GROUP)
         self._draw_label(cast, LEVEL_GROUP, LEVEL_FORMAT, stats.get_level())
