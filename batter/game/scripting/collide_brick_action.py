@@ -19,7 +19,6 @@ class CollideBrickAction(Action):
             brick_body = brick.get_body()
 
             if self._physics_service.has_collided(ball_body, brick_body):
-                ball.bounce_y()
                 sound = Sound(BOUNCE_SOUND)
                 self._audio_service.play_sound(sound)
                 points = brick.get_points()
