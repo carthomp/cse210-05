@@ -24,3 +24,4 @@ class CollideBrickAction(Action):
                 points = brick.get_points()
                 stats.add_points(points)
                 cast.remove_actor(BRICK_GROUP, brick)
+                cast.remove_actor(BALL_GROUP, ball)

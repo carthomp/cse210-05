@@ -95,7 +95,7 @@ BALL_GROUP = "balls"
 BALL_IMAGE = "batter/assets/images/000.png"
 BALL_WIDTH = 28
 BALL_HEIGHT = 28
-BALL_VELOCITY = 6
+BALL_VELOCITY = 15
 
 # RACKET
 RACKET_GROUP = "rackets"

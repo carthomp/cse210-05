@@ -157,16 +157,33 @@ class SceneManager:
         ball.release()
 
     def _add_ball(self, cast):
-        cast.clear_actors(BALL_GROUP)
-        x = CENTER_X - BALL_WIDTH / 2
-        y = SCREEN_HEIGHT - RACKET_HEIGHT - BALL_HEIGHT
-        position = Point(x, y)
-        size = Point(BALL_WIDTH, BALL_HEIGHT)
-        velocity = Point(0, 0)
-        body = Body(position, size, velocity)
-        image = Image(BALL_IMAGE)
-        ball = Ball(body, image, True)
-        cast.add_actor(BALL_GROUP, ball)
+        # cast.clear_actors(BALL_GROUP)
+        # x = CENTER_X - BALL_WIDTH / 2
+        # y = SCREEN_HEIGHT - RACKET_HEIGHT - BALL_HEIGHT
+        # position = Point(x, y)
+        # size = Point(BALL_WIDTH, BALL_HEIGHT)
+        # velocity = Point(0, 0)
+        # body = Body(position, size, velocity)
+        # image = Image(BALL_IMAGE)
+        # ball = Ball(body, image, True)
+        # cast.add_actor(BALL_GROUP, ball)
+
+        cast.clear_actors(BRICK_GROUP)
+
+        stats = cast.get_first_actor(STATS_GROUP)
+        filename = BALL_IMAGE
+
+        for i in range(4):
+
+            x = CENTER_X - BALL_WIDTH / 2
+            y = SCREEN_HEIGHT - RACKET_HEIGHT - BALL_HEIGHT
+            position = Point(x, y)
+            size = Point(BALL_WIDTH, BALL_HEIGHT)
+            velocity = Point(0, 0)
+            body = Body(position, size, velocity)
+            image = Image(BALL_IMAGE)
+            ball = Ball(body, image)
+            cast.add_actor(BALL_GROUP, ball)
 
     def _add_bricks(self, cast):
         cast.clear_actors(BRICK_GROUP)
