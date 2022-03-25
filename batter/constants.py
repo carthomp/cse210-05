@@ -47,6 +47,7 @@ RIGHT = "right"
 SPACE = "space"
 ENTER = "enter"
 PAUSE = "p"
+SHOOT = "space"
 
 # SCENES
 NEW_GAME = 0
